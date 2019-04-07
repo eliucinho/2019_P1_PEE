@@ -32,6 +32,27 @@ public class programa {
         return arreglo;
     }
     
+    public static int obtenerPromedio(int[] arreglo){
+        int sumatotal=0;
+        int totalNumeros=arreglo.length;
+        for(int i=0;i<arreglo.length;i++){
+            sumatotal+=arreglo[i]; //sumatotal=sumatotal+arregloEnteros[i]
+        }
+        int promedio=sumatotal/totalNumeros;
+        
+        return promedio;
+    }
+    
+    public static int obtenerElMayor(int[] arreglo){
+        int mayor=0;
+        for(int i=0;i<arreglo.length;i++){
+            if (arreglo[i]>mayor) {
+                mayor=arreglo[i];
+            }
+        }
+        return mayor;
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -52,6 +73,13 @@ public class programa {
         
         imprimirArreglo(arregloAlumnos);
         
+        int promedio=obtenerPromedio(arregloEnteros);
+        
+        System.out.println("promedio: "+promedio);
+        
+        int numeroMayor=obtenerElMayor(arregloEnteros);
+        
+        System.out.println("El numero mayor es: "+numeroMayor);
     }
 
 }
